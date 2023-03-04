@@ -1,0 +1,8 @@
+Description:
+  Explain the generator
+
+Example:
+  rails g enuminator:install
+
+  This will create:
+    /app/enumerations/application_enumeration.rb

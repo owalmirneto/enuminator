@@ -1,0 +1,6 @@
+<%= locale %>:
+  enumerations:
+    <%= file_name %>:
+    <%- fields.each do |value, _| -%>
+      <%= value %>: '<%= value.humanize -%>'
+    <%- end -%>
