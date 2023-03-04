@@ -24,4 +24,4 @@ AllCops:
     - bin/**/*
     - vendor/**/*
     - node_modules/**/*
-    - lib/generators/enuminator/enum/templates/**/*
+    - lib/generators/enuminator/*/templates/**/*

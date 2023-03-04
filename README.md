@@ -26,6 +26,14 @@ And run in console
 bundle install
 ```
 
+## Generate ApplicationEnumeration
+
+You can use a Rails generator to create `ApplicationEnumeration`:
+
+```bash
+rails g enuminator:install
+```
+
 ## References
 
 - [Creating enumerations](https://github.com/lucascaton/enumerate_it#creating-enumerations)
