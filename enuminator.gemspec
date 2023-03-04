@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.push File.expand_path("lib", __dir__)
+require 'enuminator/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = "enuminator"
-  spec.version     = "0.0.1"
+  spec.version     = Enuminator::VERSION
   spec.authors     = ["Walmir Neto"]
   spec.email       = ["owalmirneto@gmail.com"]
   spec.homepage    = "http://github.com/owalmirneto/enuminator"
