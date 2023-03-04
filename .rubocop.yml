@@ -1,0 +1,27 @@
+require:
+  - rubocop-performance
+  - rubocop-rake
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - node_modules/**/*
+    - lib/generators/enuminator/enum/templates/**/*
