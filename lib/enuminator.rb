@@ -2,7 +2,5 @@
 
 require "enumerate_it"
 
-module Enuminator
-  class Engine < Rails::Engine
-  end
-end
+require 'enuminator/engine'
+require 'enuminator/base'
