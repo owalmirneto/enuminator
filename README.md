@@ -26,15 +26,40 @@ And run in console
 bundle install
 ```
 
-## Generate ApplicationEnumeration
+## Generators
 
-You can use a Rails generator to create `ApplicationEnumeration`:
+You can use a Rails generator to create `ApplicationEnumeration`, because you need this main class to use enumerations:
 
 ```bash
-rails g enuminator:install
+bin/rails g enuminator:install
 ```
 
-## References
+This command will create this file:
+
+```ruby
+# /app/enumerations/application_controller.rb
+class ApplicationEnumeration < Enuminator::Base
+end
+```
+
+You can use a Rails generator to create a specific enumeration:
+
+```bash
+bin/rails g enuminator:enum relationship_status single married divorced
+```
+
+This command will create this file:
+
+```ruby
+# /app/enumerations/application_controller.rb
+class RelationshipStatus < ApplicationEnumeration
+  associate_values(:single, :married, :divorced)
+end
+```
+
+From now you could follow the EnumerateIt references =)
+
+## EnumerateIt References
 
 - [Creating enumerations](https://github.com/lucascaton/enumerate_it#creating-enumerations)
   - [Sorting enumerations](https://github.com/lucascaton/enumerate_it#sorting-enumerations)
