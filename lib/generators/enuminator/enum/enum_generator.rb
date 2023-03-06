@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Enuminator
-  class CreateGenerator < Rails::Generators::Base
+  class EnumGenerator < Rails::Generators::Base
     source_root File.expand_path('templates', __dir__)
 
     argument :attributes, type: :hash
