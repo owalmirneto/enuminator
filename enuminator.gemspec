@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{lib}/**/*"] + ["Rakefile", "README.md"]
 
-  spec.add_dependency "enumerate_it", ">= 0.1.0"
+  spec.add_dependency "enumerate_it", ">= 3.2.4"
   spec.add_dependency "rails", ">= 3.1"
 
   spec.metadata["rubygems_mfa_required"] = "true"
