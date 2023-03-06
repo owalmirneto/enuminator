@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 module Enuminator
-  class CreateGenerator < Rails::Generators::Base
-    source_root File.expand_path('templates', __dir__)
+  class EnumGenerator < Rails::Generators::Base
+    source_root File.expand_path("templates", __dir__)
 
     argument :attributes, type: :hash
 
-    class_option :lang, type: 'string', desc: 'Language to use in i18n', default: I18n.locale
+    class_option :lang, type: "string", desc: "Language to use in i18n", default: I18n.locale
 
     def initialize(args, *_options)
       super
@@ -17,14 +17,14 @@ module Enuminator
       @locale = options[:lang]
     end
 
-    desc 'Creates the enumeration'
+    desc "Creates the enumeration"
     def create_enum
-      template('enumeration.rb', File.join("app/enumerations/#{file_name}.rb"))
+      template("enumeration.rb", File.join("app/enumerations/#{file_name}.rb"))
     end
 
-    desc 'Creates a locale file on config/locales'
+    desc "Creates a locale file on config/locales"
     def create_locale
-      template 'enumeration.yml', File.join("config/locales/#{locale}/enumerations/#{file_name}.yml")
+      template "enumeration.yml", File.join("config/locales/#{locale}/enumerations/#{file_name}.yml")
     end
 
     private
@@ -32,7 +32,7 @@ module Enuminator
     attr_reader :class_name, :file_name, :locale, :values
 
     def current_values
-      fields.map { |f, v| v ? "#{f}: #{v}" : ":#{f}"}.join(", ")
+      fields.map { |f, v| v ? "#{f}: #{v}" : ":#{f}" }.join(", ")
     end
 
     def fields

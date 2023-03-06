@@ -2,5 +2,5 @@
 
 require "enumerate_it"
 
-require 'enuminator/engine'
-require 'enuminator/base'
+require "enuminator/engine"
+require "enuminator/base"

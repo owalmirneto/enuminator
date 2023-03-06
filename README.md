@@ -5,7 +5,7 @@ Enumerations for Ruby or Rails inspired in [EnumerateIt](https://github.com/luca
 ## Installation
 
 ```bash
-bundle add enuminator
+gem install enuminator
 ```
 
 ## Using with Rails
@@ -14,27 +14,40 @@ bundle add enuminator
 bundle add enuminator
 ```
 
-OR
+## Generators
+
+You can use a Rails generator to create `ApplicationEnumeration`, because you need this main class to use enumerations:
 
 ```bash
-gem "enuminator", "~> 0.0.1"
+bin/rails g enuminator:install
 ```
 
-And run in console
+This command will create this file:
+
+```ruby
+# /app/enumerations/application_controller.rb
+class ApplicationEnumeration < Enuminator::Base
+end
+```
+
+You can use a Rails generator to create a specific enumeration:
 
 ```bash
-bundle install
+bin/rails g enuminator:enum relationship_status single married divorced
 ```
 
-## Generate ApplicationEnumeration
+This command will create this file:
 
-You can use a Rails generator to create `ApplicationEnumeration`:
-
-```bash
-rails g enuminator:install
+```ruby
+# /app/enumerations/application_controller.rb
+class RelationshipStatus < ApplicationEnumeration
+  associate_values(:single, :married, :divorced)
+end
 ```
 
-## References
+From now you could follow the EnumerateIt references =)
+
+## EnumerateIt References
 
 - [Creating enumerations](https://github.com/lucascaton/enumerate_it#creating-enumerations)
   - [Sorting enumerations](https://github.com/lucascaton/enumerate_it#sorting-enumerations)
