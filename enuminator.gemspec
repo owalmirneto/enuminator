@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.push File.expand_path("lib", __dir__)
-require 'enuminator/version'
+require "enuminator/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
